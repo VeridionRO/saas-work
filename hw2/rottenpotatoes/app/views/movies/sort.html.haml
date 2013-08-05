@@ -1,0 +1,31 @@
+-#  This file is app/views/movies/index.html.haml
+%h1 All Movies
+
+=form_tag movies_sort_path('title',"#{@dir}"), :method => :put do |f|
+  %p{:class => "all"} Include:
+  %p{:class => "all"}
+    = label :rating, "G"
+    = check_box :rating,"G", :checked => true
+    = label :rating, "PG"
+    = check_box :rating,"PG", :checked => true
+    = label :rating, "PG-13"
+    = check_box :rating,"PG-13"
+    = label :rating, "R"
+    = check_box :rating,"R"
+
+%table#movies
+  %thead
+    %tr
+      %th{:class => ('hilite' if @col == 'title')}= link_to 'Movie Title', movies_sort_path('title',"#{@dir}"), :id => "title_header"
+      %th Rating
+      %th{:class => ('hilite' if @col == 'release_date')}= link_to 'Release Date', movies_sort_path('release_date',"#{@dir}"), :id => "release_date_header"
+      %th More Info
+  %tbody
+    - @movies.each do |movie|
+      %tr
+        %td= movie.title 
+        %td= movie.rating
+        %td= movie.release_date
+        %td= link_to "More about #{movie.title}", movie_path(movie)
+
+= link_to 'Add new movie', new_movie_path
