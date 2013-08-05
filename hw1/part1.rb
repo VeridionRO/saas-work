@@ -2,7 +2,7 @@
 #file loaded.  Make changes to this file and then run 'ruby part1.rb' at the command line, this will run your program.  Once you're
 #satisfied with your work, save your file and upload it to the checker.
 
-
+# add comment
 def palindrome?(str)
   flat_str = str.gsub /[\W+]/, ''
   reverse_str = flat_str.reverse
