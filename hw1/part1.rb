@@ -3,7 +3,7 @@
 #satisfied with your work, save your file and upload it to the checker.
 
 # add comment
-# second comment
+# second comment 1
 def palindrome?(str)
   flat_str = str.gsub /[\W+]/, ''
   reverse_str = flat_str.reverse
