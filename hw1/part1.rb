@@ -4,6 +4,7 @@
 
 # add comment
 # second comment 1
+# third comment 2
 def palindrome?(str)
   flat_str = str.gsub /[\W+]/, ''
   reverse_str = flat_str.reverse
