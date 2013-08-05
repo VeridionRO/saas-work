@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="hw1"/>
+	<buildpathentry kind="src" path="hw2/rottenpotatoes"/>
+	<buildpathentry kind="src" path="hw3/cucumber-intro"/>
+	<buildpathentry kind="con" path="org.eclipse.dltk.launching.INTERPRETER_CONTAINER"/>
+</buildpath>
